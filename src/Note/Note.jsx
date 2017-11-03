@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./Note.css";
 import PropTypes from "prop-types";
 import NoteForm from "../NoteForm/NoteForm";
-import './Note.css';
-
+import App from "../App";
 
 class Note extends Component {
   constructor(props) {
@@ -11,6 +10,7 @@ class Note extends Component {
     this.noteContent = props.noteContent;
     this.noteId = props.noteId;
     this.handleRemoveNote = this.handleRemoveNote.bind(this);
+    this.addNote = this.addNote.bind(this);
     // this.editNote = this.editNote.bind(this);
 
     this.state = { showForm: false };
@@ -23,32 +23,42 @@ class Note extends Component {
   editNote(id) {
     this.props.editNote(id);
   }
+  addNote(note) {
+    ///push the note into notes array
+    this.database.push().set({ noteContent: note });
+  }
 
   render(props) {
     return (
       <div className="note fade-in">
+
         <span
-          className="closebtn"
+          className="closeBtn"
           onClick={() => this.handleRemoveNote(this.noteId)}
         >
           &times;
         </span>
-        <span
-          className="editbtn"
-          onClick={() => this.setState({ showForm: true })}
-        >
-          Edit
-        </span>
-        {this.state.showForm ? (
-          <NoteForm addNote={(noteContent) =>{
-              this.props.editNote(noteContent);
-              this.setState({showForm: false})
 
+        {this.state.showForm ? (
+          <NoteForm
+            addNote={noteContent => {
+              this.props.editNote(noteContent);
+              window.location.reload();
+
+              this.setState({ showForm: false });
             }}
-              value={Note} />
+            value={Note}
+          />
         ) : null}
 
         <p className="noteContent">{this.noteContent}</p>
+
+          <span
+            className="editBtn"
+            onClick={() => this.setState({ showForm: true })}
+          >
+            Edit
+          </span>
       </div>
     );
   }

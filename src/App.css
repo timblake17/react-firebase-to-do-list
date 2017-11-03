@@ -5,25 +5,23 @@ html{
 body {
   width: 100%;
   min-height:100%;
-  background:
-    linear-gradient(-45deg, rgba(0,0,0,0.3), rgba(0, 40, 105, 0.8));
-  background-attachment: fixed;
-  background-size: cover;
+  background:blue
 }
 
-* {
+/** {
   height: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-}
+}*/
 
 .notesWrapper {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   height: 100%;
+  width:100%
 }
 
 .notesHeader {
@@ -33,7 +31,13 @@ body {
   max-height: 2em;
   font-size: 3.2em;
   color: #F4B350;
-  font-family: 'Permanent Marker', cursive;
+  background-image: url('https://images-cdn.9gag.com/photo/azLqWBN_700b.jpg');
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-position-y: center;
+    object-fit: cover;
   text-align: center;
   align-content: center;
   padding:20px 0px 20px 0px;
@@ -57,4 +61,17 @@ body {
   display: flex;
   flex: 1 1 5%;
   background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  bottom: 0px;
+  margin-left: 10%;
+}
+
+.note{
+  display: block;
+  width: 80%;
+  border: black solid 2px;
+  margin-left: 10%;
+  text-align: center;
+  margin-bottom: 1em;
+  background-color: darkorange;
 }
