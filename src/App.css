@@ -5,7 +5,10 @@ html{
 body {
   width: 100%;
   min-height:100%;
-  background:blue
+  /* background-color: #ff3900; */
+  background:#a62500;
+
+
 }
 
 /** {
@@ -26,23 +29,15 @@ body {
 
 .notesHeader {
   display: flex;
-  flex: 1 1 5%;
-  min-height: 2.5em;
-  max-height: 2em;
   font-size: 3.2em;
-  color: #F4B350;
-  background-image: url('https://images-cdn.9gag.com/photo/azLqWBN_700b.jpg');
-  background-position: top;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-    background-position-y: center;
-    object-fit: cover;
+  color: white;
+  /* background:#a62500; */
+  background-color: #ff3900;
+
   text-align: center;
   align-content: center;
   padding:20px 0px 20px 0px;
   margin-bottom: 6px;
-  background-color: rgba(0,0,0,0.5);
   text-shadow: 3px 3px 10px #000;
   display: block;
 }
@@ -73,5 +68,5 @@ body {
   margin-left: 10%;
   text-align: center;
   margin-bottom: 1em;
-  background-color: darkorange;
+  background-color:white ;
 }

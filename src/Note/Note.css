@@ -1,5 +1,7 @@
 .formWrapper{
     margin: auto;
+    background:#a62500;
+    padding-bottom: 25px;
 }
 
 .noteButton{
